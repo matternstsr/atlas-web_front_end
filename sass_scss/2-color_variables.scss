@@ -1,11 +1,13 @@
 // 2-color_variables.scss
 
-$text-color: #3D3D3D;
-$background-color: #6D6D6D;
+$textc: #3D3D3D;
+$backgroundc: #6D6D6D;
 
 body, p {
-  color: $text-color;
+  color: $textc;
+  background-color: $backgroundc;
 }
 
 h2 {
+  background-color: $backgroundc;
 }
