@@ -93,7 +93,9 @@ To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/0-debug_log.scss | head -n 1
 
 This should output:
+```answer
 0-debug_log.scss:2 DEBUG: Hello world
+```
 
 Repository Information:
 
@@ -126,11 +128,13 @@ To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/1-color_variable.scss | tail -n +2
 
 This should output:
+```answer
 body {
   color: #3D3D3D; }
 
 p {
   color: #3D3D3D; }
+```
 
 Repository Information:
 
@@ -174,6 +178,7 @@ To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/2-color_variables.scss | tail -n +2
 
 This should output:
+```answer
 body {
   color: #3D3D3D;
   background-color: #6D6D6D; }
@@ -183,6 +188,7 @@ p {
 
 h2 {
   background-color: #6D6D6D; }
+```
 
 Repository Information:
 
