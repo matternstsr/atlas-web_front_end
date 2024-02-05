@@ -198,12 +198,6 @@ GitHub Repository: atlas-web_front_end
 Directory: sass_scss
 File: 2-color_variables.scss
 
-
-
-add this in the same manner please and all code should have backticks before and after.
-
-
-
 3. Nested tag
 mandatory
 Write a Sass file that assigns:
@@ -212,6 +206,7 @@ No margin or padding in body tags
 Margin 10px to all of the p tags inside body tags
 You must use nested declarations
 guillaume@ubuntu:~/$ sass 3-nested_tag.scss | tail -n +2
+
 ```scss
 body {
   margin: 0px;
