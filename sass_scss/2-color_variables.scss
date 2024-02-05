@@ -3,11 +3,11 @@
 $text-color: #3D3D3D;
 $background-color: #6D6D6D;
 
-body {
+body, p {
   color: $text-color;
   background-color: $background-color;
 }
 
-p {
-  color: inherit; // Inherit text color from the parent scss???????
+h2 {
+  background-color: $background-color;
 }
