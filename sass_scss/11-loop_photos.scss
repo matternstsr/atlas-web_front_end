@@ -1,5 +1,11 @@
-@for $i from 1 through 5 {
-  h#{$i} {
-    font-size: #{$i}px;
+// List of all names
+$list-names: julien john sam damian;
+
+// Loop through names and make classes
+@import "partials/photos"; // Importing a part of a file for image-url function
+
+@each $name in $list-names {
+  .photo-#{$name} {
+    background: image-url("photos/#{$name}.jpg") no-repeat;
   }
 }
