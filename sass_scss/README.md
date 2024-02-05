@@ -87,6 +87,7 @@ body {
   // Debug statement to print "Hello world" in the debug output
   @debug "Hello world";
 }
+```
 
 To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/0-debug_log.scss | head -n 1
@@ -119,6 +120,7 @@ body {
 p {
   color: $text-color;
 }
+```
 
 To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/1-color_variable.scss | tail -n +2
@@ -166,6 +168,7 @@ p {
 h2 {
   background-color: $background-color;
 }
+```
 
 To test the file, run the following command:
 guillaume@ubuntu:~/$ sass sass_scss/2-color_variables.scss | tail -n +2
