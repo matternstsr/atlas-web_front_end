@@ -1,13 +1,13 @@
 // 2-color_variables.scss
 
-$textc: #3D3D3D;
-$backgroundc: #6D6D6D;
+$text-color: #3D3D3D;
+$background-color: #6D6D6D;
 
-body, p {
-  color: $textc;
-  background-color: $backgroundc;
+body {
+  color: $text-color;
+  background-color: $background-color;
 }
 
-h2 {
-  background-color: $backgroundc;
+p {
+  color: inherit; // Inherit text color from the parent scss???????
 }
