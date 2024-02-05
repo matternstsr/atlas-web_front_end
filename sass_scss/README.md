@@ -213,7 +213,7 @@ body {
   padding: 0px; }
   body p {
     margin: 10px; }
-```scss
+```
 
 guillaume@ubuntu:~/$ 
 Repo:
@@ -231,12 +231,13 @@ Text color #3D3D3D to elements inside body tags
 Text color #FF0000 to any elements of class .red inside body tags
 You must use nested declarations
 guillaume@ubuntu:~/$ sass 4-nested_class.scss | tail -n +2
+
 ```scss
 body {
   color: #3D3D3D; }
   body .red {
     color: #FF0000; }
-```scss
+```
 
 guillaume@ubuntu:~/$ 
 Repo:
@@ -254,12 +255,13 @@ Text color #3D3D3D to elements inside body tags
 Text color #FF0000 to any elements of class .red that are the first children of the body
 You must use nested declarations
 guillaume@ubuntu:~/$ sass 5-nested_child.scss | tail -n +2
+
 ```scss
 body {
   color: #3D3D3D; }
   body > .red {
     color: #FF0000; }
-```scss
+```
 
 guillaume@ubuntu:~/$ 
 Repo:
@@ -277,12 +279,14 @@ Text color #FF0000 to button tags
 When the user hovers over button tags, text color should change to #00FF00
 You must use nested declarations
 guillaume@ubuntu:~/$ sass 6-nested_hover.scss | tail -n +2
+
 ```scss
 button {
   color: #FF0000; }
   button:hover {
     color: #00FF00; }
-```scss
+```
+
 guillaume@ubuntu:~/$ 
 Repo:
 
@@ -300,6 +304,7 @@ Font size 16px to all h1 tags inside body tags
 Font size 12px to h1 tags of class .smaller inside body tags
 You must use nested declarations
 guillaume@ubuntu:~/$ sass 7-nested_deeper.scss | tail -n +2
+
 ```scss
 body {
   font-size: 14px; }
@@ -307,7 +312,8 @@ body {
     font-size: 16px; }
     body h1.smaller {
       font-size: 12px; }
-```scss
+```
+
 guillaume@ubuntu:~/$ 
 Repo:
 
@@ -324,6 +330,7 @@ Margin left and right at 10px to body tags
 Margin left and right at 15px to div tags
 You must use a mixin
 guillaume@ubuntu:~/$ sass 8-mixin_margins.scss | tail -n +2
+
 ```scss
 body {
   margin-left: 10px;
@@ -332,7 +339,7 @@ body {
 div {
   margin-left: 15px;
   margin-right: 15px; }
-```scss
+```
 
 guillaume@ubuntu:~/$ 
 Repo:
@@ -360,7 +367,7 @@ guillaume@ubuntu:~/$ sass 9-extend_list.scss | tail -n +2
 
 .warning {
   color: #FF0000; }
-```scss
+```
 
 guillaume@ubuntu:~/$ 
 Repo:
@@ -395,7 +402,8 @@ guillaume@ubuntu:~/$ sass 10-import_colors.scss | tail -n +3
 .blue {
   color: #0000FF; }
 
-```scss
+```
+
 guillaume@ubuntu:~/$ 
 Repo:
 
@@ -428,7 +436,8 @@ guillaume@ubuntu:~/$ sass 11-loop_photos.scss | tail -n +3
 .photo-damian {
   background: image-url("photos/damian.jpg") no-repeat; }
 
-```scss
+```
+
 guillaume@ubuntu:~/$ 
 Repo:
 
@@ -462,7 +471,8 @@ h4 {
 h5 {
   font-size: 5px; }
 
-```scss
+```
+
 guillaume@ubuntu:~/$ 
 Repo:
 
