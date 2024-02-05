@@ -1,5 +1,4 @@
-What I have so far:
-
+![sass](sass.png)
 # Project Name: Sass & Scss Mastery
 
 ## Overview
@@ -40,6 +39,9 @@ $ sudo apt-get install ubuntu-dev-tools
 $ gem install sass -v 3.7.4
 $ sass --version
 ```
+
+![glasses](glasses.png)
+
 
 # Sass Quiz
 
