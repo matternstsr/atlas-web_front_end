@@ -345,12 +345,18 @@ a:active {
   margin-right: auto;
 }
 
+/*** 2. LAYOUT ***/
+
 /* Grid */
 ul.row {
+  display: flex; /* Added selector for row class */
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+/* Removed row::after declaration */
+
 
 .row::after {
   content: '';
