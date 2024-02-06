@@ -112,7 +112,7 @@ The project consists of multiple HTML and CSS files, each corresponding to diffe
 - [14-article.html](14-article.html)
 - [14-styles.css](14-styles.css)
 - [CSSstarterfile.css](CSSstarterfile.css)
-- [HTMLstarterfile.html](HTMLstarterfile.htnl)
+- [HTMLstarterfile.html](HTMLstarterfile.html)
 - [article.html](article.html)
 
 ## Resources
