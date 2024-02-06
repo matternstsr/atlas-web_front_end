@@ -379,11 +379,11 @@
       margin-top: -8.5rem;
     }
 
-    .section-hero.hero-homepage .section-body {
+    .hero-homepage .section-body {
       padding: 10rem 4rem;
     }
 
-    .section-hero.hero-homepage .section-category {
+    .hero-homepage .section-category {
       color: var(--color-white);
       text-transform: uppercase;
     }
