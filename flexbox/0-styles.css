@@ -189,13 +189,14 @@
     list-style: none;
   }
   
-  .row::after {
+  /*.row::after {
     content: '';
     display: table;
     clear: both;
-  }
+  }removed for task 0*/
   
   [class*='col-'] {
+    /*float: left;removed for task 0*/
     padding: 0.5rem;
   }
   
