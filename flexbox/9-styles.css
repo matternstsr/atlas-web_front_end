@@ -394,6 +394,14 @@
     .section-latest-news .row {
       flex-direction: row-reverse;
     }
+
+    /* Section SERVICES section */
+
+    /* Section ABOUT US section */
+    .section-about-us .col- {
+     align-self: center; /* Added property */
+    }
+
   
     /*** 4. CARD ***/
     
@@ -490,13 +498,6 @@
       transition-property: color, background-color;
     }
 
-    /* Section ABOUT US
-        ============================= */
-  .section-about-us .col- {
-    align-self: center; /* Added align-self: center property */
-  }
-
-    
     /* Card TESTIMONIAL
         ============================= */
     
