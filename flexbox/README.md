@@ -81,7 +81,7 @@ By the end of this project, you should be able to:
 
 The project consists of multiple HTML and CSS files, each corresponding to different tasks. Ensure you follow the task instructions and update the relevant files accordingly.
 
-- [0-index.html](flexbox/0-index.html)
+- [0-index.html](0-index.html)
 - [0-styles.css](flexbox/0-styles.css)
 - [1-index.html](flexbox/1-index.html)
 - [1-styles.css](flexbox/1-styles.css)
