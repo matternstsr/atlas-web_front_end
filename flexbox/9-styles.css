@@ -395,25 +395,28 @@
       flex-direction: row-reverse;
     }
 
-    /* Section SERVICES*/
+    /* Section SERVICES ============== */
 
-    /* Section ABOUT US*/
-    .section-about-us .col- {
-     align-self: center; /* Added property */
+    .section-services .row {
+      flex-wrap: wrap;
+    }
+    
+    /* Section ABOUT US ============================= */
+    
+    .section-about-us [class*='col-'] {
+      align-self: center;
     }
 
   
     /*** 4. CARD ***/
     
-    /* Card (all styles)
-        ============================= */
+    /* Card (all styles) ============================= */
     
     .card-category {
       color: var(--color-primary);
     }
     
-    /* Card WORK
-        ============================= */
+    /* Card WORK ============================= */
     
     .card-work .card-outer {
       position: relative;
