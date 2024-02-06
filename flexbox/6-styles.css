@@ -230,8 +230,8 @@
 
   /* added Target .nav-item + .nav-item inside nav class per 6 */
   .nav .nav-item + .nav-item {
-    margin: 0 0 0 2rem; /* Move margin declaration here */
-}
+    margin: var(--nav-item-margin);
+  }
   
   .nav .nav-link {
     display: block;
