@@ -368,16 +368,29 @@
     
     /* Section HERO
         ============================= */
-    
-    .section-hero {
+    .hero-homepage {
       background-position: 75% 0;
       background-repeat: no-repeat;
       background-size: 90rem auto;
       background-color: #010101;
     }
+
+    .section-hero {
+      position: relative;
+      margin-top: -8.5rem;
+    }
+
+    .section-hero .section-body {
+      padding: 10rem 4rem
+    }
+
+    .section-hero .section-category {
+      color: var(--color-white)
+    }
     
     .section-hero .section-title {
       margin-bottom: 5rem;
+      text-transform: uppercase
     }
     
     .section-hero .section-inner {
