@@ -395,9 +395,9 @@
       flex-direction: row-reverse;
     }
 
-    /* Section SERVICES */
+    /* Section SERVICES*/
 
-    /* Section ABOUT US section */
+    /* Section ABOUT US*/
     .section-about-us .col- {
      align-self: center; /* Added property */
     }
