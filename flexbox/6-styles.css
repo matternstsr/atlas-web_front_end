@@ -152,7 +152,7 @@
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
     /* display: var(--nav-item-display); removed per 6 */
-    /*margin: 0 0 0 2rem; /* Updated margin */
+    margin: 0 0 0 2rem; /* Updated margin
   }
 
   /* added Target .nav-item + .nav-item inside nav class per 6 */
