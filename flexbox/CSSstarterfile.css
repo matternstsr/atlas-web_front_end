@@ -15,7 +15,7 @@
 /* Variables
    ============================= */
 
-   :root {
+  :root {
     --color-primary: #D73953;
     --color-black:  #090909;
     --color-white: #ffffff;
@@ -260,9 +260,9 @@
   
   .header {
     padding: var(--header-padding);
-         position: relative;
-         z-index: 3;
-         background: transparent;
+        position: relative;
+        z-index: 3;
+        background: transparent;
   }
   
   .header-logo {
