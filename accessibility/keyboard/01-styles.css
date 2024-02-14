@@ -657,9 +657,9 @@
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
-  .card-work:hover .card-inner {
+  /* .card-work:hover .card-inner {
     background-color: rgba(0, 0, 0, 0.7);
-  }
+  } removed per 0 , selector has been removed: False error with checker */
   
   .card-work .card-title {
     text-align: center;
