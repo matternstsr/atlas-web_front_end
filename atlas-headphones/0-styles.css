@@ -1,0 +1,702 @@
+.element-headphones {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.element-headphones .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1400px;
+  height: 3006px;
+  position: relative;
+}
+
+.element-headphones .part-footer {
+  position: absolute;
+  width: 1400px;
+  height: 249px;
+  top: 2757px;
+  left: 0;
+  overflow: hidden;
+}
+
+.element-headphones .overlap {
+  position: relative;
+  width: 1402px;
+  height: 251px;
+  top: -1px;
+  left: -1px;
+  background-color: #071629;
+}
+
+.element-headphones .text-wrapper {
+  position: absolute;
+  top: 195px;
+  left: 652px;
+  opacity: 0.35;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .logo {
+  top: 93px;
+  left: 201px;
+  position: absolute;
+  width: 161px;
+  height: 32px;
+}
+
+.element-headphones .HE-ad-PHON-es {
+  position: absolute;
+  width: 114px;
+  height: 12px;
+  top: 11px;
+  left: 47px;
+}
+
+.element-headphones .overlap-group {
+  position: absolute;
+  width: 33px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/polygon.svg);
+  background-size: 100% 100%;
+}
+
+.element-headphones .polygon {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 6px;
+  left: 6px;
+}
+
+.element-headphones .img {
+  position: absolute;
+  width: 8px;
+  height: 7px;
+  top: 13px;
+  left: 13px;
+}
+
+.element-headphones .social-icons {
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  top: 91px;
+  left: 1071px;
+}
+
+.element-headphones .instagram {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 100px;
+}
+
+.element-headphones .twitter {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 50px;
+}
+
+.element-headphones .facebook {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+}
+
+.element-headphones .part-contact-us {
+  position: absolute;
+  width: 335px;
+  height: 373px;
+  top: 2254px;
+  left: 533px;
+}
+
+.element-headphones .text-wrapper-2 {
+  position: absolute;
+  top: -1px;
+  left: 94px;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  font-weight: 400;
+  color: #071629;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .input {
+  position: absolute;
+  width: 335px;
+  height: 29px;
+  top: 96px;
+  left: 0;
+  overflow: hidden;
+}
+
+.element-headphones .div-2 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  font-weight: 400;
+  color: #071629;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.element-headphones .rectangle {
+  position: absolute;
+  width: 337px;
+  height: 3px;
+  top: 27px;
+  left: -1px;
+  background-color: #071629;
+  opacity: 0.17;
+}
+
+.element-headphones .input-2 {
+  position: absolute;
+  width: 335px;
+  height: 29px;
+  top: 170px;
+  left: 0;
+  overflow: hidden;
+}
+
+.element-headphones .input-3 {
+  position: absolute;
+  width: 335px;
+  height: 29px;
+  top: 244px;
+  left: 0;
+  overflow: hidden;
+}
+
+.element-headphones .button {
+  all: unset;
+  box-sizing: border-box;
+  top: 329px;
+  left: 86px;
+  position: absolute;
+  width: 162px;
+  height: 44px;
+  overflow: hidden;
+}
+
+.element-headphones .div-wrapper {
+  position: relative;
+  width: 164px;
+  height: 46px;
+  top: -1px;
+  left: -1px;
+  background-color: #ff6565;
+  border-radius: 22px;
+}
+
+.element-headphones .text-wrapper-3 {
+  position: absolute;
+  top: 13px;
+  left: 32px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .part-dark {
+  position: absolute;
+  width: 1400px;
+  height: 650px;
+  top: 1494px;
+  left: 1px;
+}
+
+.element-headphones .overlap-2 {
+  position: relative;
+  width: 1399px;
+  height: 650px;
+  background-image: url(./img/image.png);
+  background-size: 100% 100%;
+}
+
+.element-headphones .our-results-speak-fo {
+  position: absolute;
+  top: 140px;
+  left: 477px;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .lorem-ipsum-dolor-si {
+  position: absolute;
+  width: 637px;
+  top: 220px;
+  left: 382px;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .dot {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 381px;
+  left: 207px;
+}
+
+.element-headphones .overlap-group-2 {
+  position: relative;
+  width: 181px;
+  height: 172px;
+  left: 5px;
+  background-image: url(./img/polygon-copy.svg);
+  background-size: 100% 100%;
+}
+
+.element-headphones .text-wrapper-4 {
+  top: 115px;
+  left: 35px;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  color: #ffffff;
+  font-size: 14px;
+  white-space: nowrap;
+  position: absolute;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .text-wrapper-5 {
+  position: absolute;
+  top: 69px;
+  left: 46px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 46px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.element-headphones .overlap-wrapper {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 381px;
+  left: 473px;
+}
+
+.element-headphones .overlap-3 {
+  position: relative;
+  width: 181px;
+  height: 172px;
+  left: 5px;
+  background-image: url(./img/polygon-3.svg);
+  background-size: 100% 100%;
+}
+
+.element-headphones .overlap-group-wrapper {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 381px;
+  left: 739px;
+}
+
+.element-headphones .overlap-4 {
+  position: relative;
+  width: 181px;
+  height: 172px;
+  left: 5px;
+  background-image: url(./img/polygon-copy-2.svg);
+  background-size: 100% 100%;
+}
+
+.element-headphones .dot-2 {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  top: 381px;
+  left: 1005px;
+}
+
+.element-headphones .overlap-5 {
+  position: relative;
+  width: 181px;
+  height: 172px;
+  left: 5px;
+  background-image: url(./img/polygon-copy-2-2.svg);
+  background-size: 100% 100%;
+}
+
+.element-headphones .part-icons {
+  position: absolute;
+  width: 1002px;
+  height: 193px;
+  top: 1191px;
+  left: 200px;
+}
+
+.element-headphones .ic {
+  position: absolute;
+  width: 207px;
+  height: 180px;
+  top: 13px;
+  left: 0;
+}
+
+.element-headphones .p {
+  width: 207px;
+  top: 127px;
+  left: 0;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  color: #071629;
+  font-size: 14px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.element-headphones .text-wrapper-6 {
+  position: absolute;
+  width: 207px;
+  top: 88px;
+  left: 0;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  font-weight: 400;
+  color: #071629;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .sound-frecuency {
+  position: absolute;
+  width: 94px;
+  height: 65px;
+  top: 0;
+  left: 56px;
+}
+
+.element-headphones .ic-2 {
+  position: absolute;
+  width: 207px;
+  height: 193px;
+  top: 0;
+  left: 265px;
+}
+
+.element-headphones .lorem-ipsum-dolor-si-2 {
+  width: 207px;
+  top: 140px;
+  color: #071629;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .text-wrapper-7 {
+  width: 207px;
+  top: 101px;
+  left: 0;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  color: #071629;
+  font-size: 18px;
+  position: absolute;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .video {
+  position: absolute;
+  width: 68px;
+  height: 77px;
+  top: 0;
+  left: 72px;
+}
+
+.element-headphones .ic-3 {
+  position: absolute;
+  width: 207px;
+  height: 179px;
+  top: 14px;
+  left: 530px;
+}
+
+.element-headphones .lorem-ipsum-dolor-si-3 {
+  width: 207px;
+  top: 126px;
+  color: #071629;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .text-wrapper-8 {
+  width: 207px;
+  top: 87px;
+  left: 0;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  color: #071629;
+  font-size: 18px;
+  position: absolute;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .music {
+  position: absolute;
+  width: 52px;
+  height: 57px;
+  top: 0;
+  left: 78px;
+}
+
+.element-headphones .ic-4 {
+  position: absolute;
+  width: 207px;
+  height: 180px;
+  top: 13px;
+  left: 795px;
+}
+
+.element-headphones .hearing {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  top: 0;
+  left: 74px;
+}
+
+.element-headphones .part-what-we-do {
+  position: absolute;
+  width: 637px;
+  height: 184px;
+  top: 910px;
+  left: 382px;
+}
+
+.element-headphones .text-wrapper-9 {
+  position: absolute;
+  top: -1px;
+  left: 224px;
+  font-family: "SourceSansPro-Semibold", Helvetica;
+  font-weight: 400;
+  color: #071629;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .lorem-ipsum-dolor-si-4 {
+  width: 637px;
+  top: 79px;
+  color: #071629;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .div-3 {
+  position: absolute;
+  width: 1400px;
+  height: 800px;
+  top: 0;
+  left: 0;
+}
+
+.element-headphones .overlap-6 {
+  height: 800px;
+  background-image: url(./img/background.png);
+  background-size: 100% 100%;
+}
+
+.element-headphones .text {
+  position: relative;
+  width: 637px;
+  height: 313px;
+  top: 372px;
+  left: 382px;
+}
+
+.element-headphones .lorem-ipsum-dolor-se {
+  top: -1px;
+  left: 29px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.element-headphones .lorem-ipsum-dolor-se-2 {
+  position: absolute;
+  top: 39px;
+  left: 141px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .lorem-ipsum-dolor-si-5 {
+  width: 637px;
+  top: 208px;
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  font-family: "Source Sans Pro-Regular", Helvetica;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.element-headphones .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  top: 100px;
+  left: 237px;
+  box-shadow: 0px 2px 20px #00000080;
+  position: absolute;
+  width: 162px;
+  height: 44px;
+  overflow: hidden;
+}
+
+.element-headphones .header {
+  position: absolute;
+  width: 1000px;
+  height: 32px;
+  top: 28px;
+  left: 201px;
+  background-color: transparent;
+}
+
+.element-headphones .menu {
+  position: absolute;
+  width: 255px;
+  height: 15px;
+  top: 9px;
+  left: 745px;
+}
+
+.element-headphones .text-wrapper-10 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .text-wrapper-11 {
+  position: absolute;
+  top: -1px;
+  left: 102px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .text-wrapper-12 {
+  position: absolute;
+  top: -1px;
+  left: 200px;
+  font-family: "Source Sans Pro-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.element-headphones .logo-2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 161px;
+  height: 32px;
+}
+
+.element-headphones .overlap-group-3 {
+  position: absolute;
+  width: 33px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/image.svg);
+  background-size: 100% 100%;
+}
