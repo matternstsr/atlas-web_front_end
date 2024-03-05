@@ -1,7 +1,7 @@
 /* primary Button styles */
 .btn-primary {
   background-color: #E0003C;
-
+  border-color: #E0003C;
 }
 
 .btn-primary:hover,
