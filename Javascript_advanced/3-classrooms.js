@@ -12,7 +12,6 @@
 // console.log(classRoom[3]());
 // console.log(classRoom[9]());
 
-
 const createClassRoom = (numbersOfStudents) => {
   const studentSeat = (seat) => {
       return function () {
@@ -25,5 +24,4 @@ const createClassRoom = (numbersOfStudents) => {
   }
   return students
 }
-
 let classRoom = createClassRoom(10)
