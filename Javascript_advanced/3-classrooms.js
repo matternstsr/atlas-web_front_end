@@ -26,4 +26,4 @@ const createClassRoom = (numbersOfStudents) => {
   return students
 }
 
-let classRoom = createClassRoom()
+let classRoom = createClassRoom(10)
