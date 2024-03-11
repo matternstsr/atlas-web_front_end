@@ -11,3 +11,19 @@
 // console.log(classRoom[0]());
 // console.log(classRoom[3]());
 // console.log(classRoom[9]());
+
+
+const createClassRoom = (numbersOfStudents) => {
+  const studentSeat = (seat) => {
+      return function () {
+          return seat;
+      }
+  }
+  let students = []
+  for (; i <= numbersOfStudents; i++) {
+      students.push(studentSeat(i + 1))
+  }
+  return students
+}
+
+let classRoom = createClassRoom()
