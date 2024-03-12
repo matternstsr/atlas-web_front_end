@@ -7,29 +7,26 @@
 // Your code should display something in the range of Execution time of printing countPrimeNumbers was 0.2700000002514571 milliseconds.
 
 const countPrimeNumbers = () => {
-  let i, j;
   let counter = 0;
-
-  for (i = 2; i <= 100; i++) {
+  for (let i = 2; i <= 100; i++) {
     let isPrime = true;
-    // Using Math.sqrt(i) for efficiency of square root
-    for (j = 2; j <= Math.sqrt(i); j++) {
-      if (i % j === 0) {
-        isPrime = false;
-        break;
-      }
+    // Changed loop to only check up to the square root
+    // NOt sure that i needed that but It felt better
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) {isPrime = false; break;}
     }
     if (isPrime) counter++;
   }
   return counter;
 };
 
-const measureExecutionTime = () => {
+const countAndMeasurePrimeNumbers = () => {
   const t1 = performance.now();
   const primesCount = countPrimeNumbers();
   const t2 = performance.now();
-  console.log(`Execution time of counting prime numbers was ${t2 - t1} milliseconds.`);
+
+  console.log(`Execution time for counting prime numbers: ${t2 - t1} milliseconds.`);
   console.log(`Number of prime numbers between 2 and 100: ${primesCount}`);
 };
 
-measureExecutionTime();
+countAndMeasurePrimeNumbers();
