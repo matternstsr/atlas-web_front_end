@@ -15,3 +15,20 @@
 // Requirements:
 // Calling bindLogWelcomeUser('Hello'); should return Hello, Buillaume. Your occupation is: Engineer
 
+const user = {
+  hobby: "Calligraphy",
+  favoriteSport: "Hockey",
+  astrologicalSign: "Aries",
+  firstName: "Buillaume",
+  lastName: "Johns",
+  location: "Netherlands",
+  occupation: "Engineer"
+};
+
+const logWelcomeUser = function(welcomeString) {
+  console.log(`${welcomeString}, ${this.firstName}. Your occupation is: ${this.occupation}`);
+};
+
+const bindLogWelcomeUser = logWelcomeUser.bind(user);
+
+console.log(bindLogWelcomeUser('Hello'));
