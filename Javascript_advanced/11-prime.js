@@ -40,4 +40,9 @@ const measureRunTime = (func, times) => {
 
   runFunction(); // Start the initial iteration
 
+  for (let i = 0; i < times - 1; i++) {
+    setTimeout(func, 0); // Schedule remaining function calls
+  }
+};
+
 measureRunTime(countPrimeNumbers, 100);
