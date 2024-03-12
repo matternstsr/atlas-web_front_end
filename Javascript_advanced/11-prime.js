@@ -5,3 +5,39 @@
 // Requirements:
 // Your code should display something in the range of Execution time of calculating prime numbers 100 times was 0.03999999910593033 milliseconds.
 // Use setTimeout keyword to change the stack order
+
+const countPrimeNumbers = () => {
+  let primeCount = 0;
+
+  for (let number = 2; number <= 100; number++) {
+      let isPrime = true;
+      for (let divisor = 2; divisor <= Math.sqrt(number); divisor++) {
+          if (number % divisor === 0) {
+              isPrime = false;
+              break;
+          }
+      }
+      if (isPrime) {
+          primeCount++;
+      }
+  }
+  return primeCount;
+};
+
+const measureRunTime = (func, times) => {
+  const startTime = performance.now();
+  let count = 0;
+
+  const runFunction = () => {
+      count++;
+      if (count < times) {
+          setTimeout(runFunction, 0);
+      } else {
+          const endTime = performance.now();
+          console.log(`Execution time of calculating prime numbers ${times} times was ${endTime - startTime} milliseconds.`);
+      }
+  };
+
+  runFunction(); // Start the initial iteration
+
+measureRunTime(countPrimeNumbers, 100);
