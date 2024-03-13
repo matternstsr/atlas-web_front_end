@@ -12,4 +12,41 @@
 // Requirements:
 // Use vanilla javascript to run the Ajax query (no jQuery or other framework)
 // You must not call createElement within queryWikipedia directly
+// YOU HAVE TO USE A BLANK HTML TO TST THIS PROPERLY. I MADE A BLANK .HTML IN NOTEPAD AND THEN ACCESSED IT.
 
+function createElement(data) {
+  let paragraph = document.createElement('p');
+  let text = document.createTextNode(data);
+  paragraph.appendChild(text);
+  document.body.appendChild(paragraph);
+}
+
+function handleWikipediaResponse(data) {
+  if (data) {
+    createElement(data);
+  } else {
+    console.error('Error: Wikipedia response is empty');
+  }
+}
+
+function queryWikipedia(callback) {
+  let xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        let response = JSON.parse(xhr.responseText);
+        let pages = response.query.pages;
+        let firstPageId = Object.keys(pages)[0];
+        let extract = pages[firstPageId]?.extract;
+        callback(extract);
+      } else {
+        console.error('Error fetching data from Wikipedia. Status code: ' + xhr.status);
+      }
+    }
+  };
+  xhr.open('GET', 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*', true);
+  xhr.send();
+}
+
+// Call queryWikipedia with createElement as callback.....
+queryWikipedia(handleWikipediaResponse);
