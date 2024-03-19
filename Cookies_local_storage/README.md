@@ -22,3 +22,10 @@ Read or watch:
 - Your code should use the `.js` extension
 - All of your code will be compiled/executed on Ubuntu 18.04 using Node 12.x and npm 6.x
 - `src/index.js` should stay empty - all your JavaScript must be in your HTML, inside `<script>` tag
+
+## To Run
+- Use `npm install -g http-server`
+- Then `http-server`
+- - OR -
+- Use `python3 -m http.server`
+- OR  `python -m http.server`

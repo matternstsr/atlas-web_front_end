@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>0. Create basic cookie</title>
+</head>
+<body>
+  <h1>Login to the website</h1>
+  <input id="firstname" type="text" placeholder="Firstname">
+  <input id="email" type="email" placeholder="Email">
+  <button id="loginBtn">Log me in</button>
+  <h1>Cookies</h1>
+  <button id="showCookiesBtn">Show the cookies</button>
+  <div id="cookieOutput"></div>
+  <script>
+    const setCookies = () => {
+        const firstNameInput = document.getElementById('firstname').value;
+        const emailInput = document.getElementById('email').value;
+        console.log("First Name: ", firstNameInput);
+        console.log("Email: ", emailInput);
+        document.cookie = `firstname=${firstNameInput};`;
+        document.cookie = `email=${emailInput};`;
+      };
+    const showCookies = () => {
+        const cookies = document.cookie ? document.cookie.split(';') : [];
+        const outputDiv = document.getElementById('cookieOutput');
+        outputDiv.innerHTML = '';
+        if (cookies.length === 0) {
+            outputDiv.innerHTML = "<p>No cookies found.</p>";
+        } else {
+            cookies.forEach(cookie => {
+                const [name, value] = cookie.trim().split('=');
+                const p = document.createElement('p');
+                p.textContent = `${name}: ${decodeURIComponent(value)}`;
+                outputDiv.appendChild(p);
+            });
+        }
+    };
+    document.getElementById('loginBtn').addEventListener('click', setCookies);
+    document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
+  </script>
+</body>
+</html>
