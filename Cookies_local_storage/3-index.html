@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3. Delete cookie and mini application</title>
+</head>
+<body>
+  <h1>Login to the website</h1>
+  <form id="loginForm" style="display:none;">
+    <input id="firstname" type="text" placeholder="Firstname">
+    <input id="email" type="email" placeholder="Email">
+    <button id="loginBtn">Log me in</button>
+  </form>
+  <h1>Cookies</h1>
+  <button id="showCookiesBtn">Show the cookies</button>
+  <div id="cookieOutput"></div>
+  <script>
+    const setCookies = () => {
+      const firstNameInput = document.getElementById('firstname').value;
+      const emailInput = document.getElementById('email').value;
+      console.log("First Name: ", firstNameInput);
+      console.log("Email: ", emailInput);
+      // Added the expiration part
+      // Grab Todays date
+      const now = new Date();
+      // Figure out what 10 days from now is:  (10 days from now)
+      //10 days
+      // 24 hours in a day
+      // 60 minutes in an hour
+      // 60 seconds in a minute
+      // 1000 milliseconds in a second
+      const expirationDate = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
+      // Converts the expiration date to a string in the UTC timezone REQUIRED!
+      const expires = expirationDate.toUTCString();
+      // MAke the cookies have that expire date
+      document.cookie = `firstname=${firstNameInput}; expires=${expires};`;
+      document.cookie = `email=${emailInput}; expires=${expires};`;
+    };
+
+    const getCookie = (name) => {
+      const cookies = document.cookie ? document.cookie.split(';') : [];
+      for (let i = 0; i < cookies.length; i++) {
+        const [cookieName, cookieValue] = cookies[i].trim().split('=');
+        if (cookieName === name) {
+          return decodeURIComponent(cookieValue);
+        }
+      }
+      return '';
+    };
+
+    const showCookies = () => {
+        const emailCookie = getCookie('email');
+        const firstnameCookie = getCookie('firstname');
+        const outputDiv = document.getElementById('cookieOutput');
+        outputDiv.innerHTML = '';
+        if (!emailCookie && !firstnameCookie) {
+            outputDiv.innerHTML = "<p>No cookies found.</p>";
+        } else {
+            const p = document.createElement('p');
+            p.textContent = `Email: ${emailCookie} - Firstname: ${firstnameCookie}`;
+            outputDiv.appendChild(p);
+        }
+    };
+
+    function showForm() {
+      const welcomeMsg = document.querySelector('h1');
+      const loginForm = document.getElementById('loginForm');
+
+      if (welcomeMsg) {
+          welcomeMsg.remove();
+      }
+      loginForm.style.display = 'block';
+    }
+
+    function hideForm() {
+      const loginForm = document.getElementById('loginForm');
+      loginForm.style.display = 'none';
+    }
+
+    function deleteCookiesAndShowForm() {
+      document.cookie = `firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+      document.cookie = `email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+      showForm();
+    }
+
+    function showWelcomeMessageOrForm() {
+      if (!getCookie('firstname') || !getCookie('email')) {
+          showForm();
+      }
+      else {
+          const welcomeMsg = document.createElement('h1');
+          welcomeMsg.textContent = `Welcome: ${getCookie('firstname')}`;
+          const logoutLink = document.createElement('a');
+          logoutLink.href = "#";
+          logoutLink.textContent = "(Logout)";
+          logoutLink.style.fontWeight = "normal";
+          logoutLink.style.fontStyle = "italic";
+          logoutLink.style.marginLeft = "10px";
+          logoutLink.onclick = function() {
+              deleteCookiesAndShowForm();
+              welcomeMsg.remove();
+              showForm();
+          };
+          welcomeMsg.appendChild(logoutLink);
+          document.body.innerHTML = '';
+          document.body.appendChild(welcomeMsg);
+      }
+    }
+
+    showWelcomeMessageOrForm();
+
+    document.getElementById('loginBtn').addEventListener('click', setCookies);
+    document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
+  </script>
+</body>
+</html>
