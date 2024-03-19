@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>1. Create cookie with expiration date and specific path</title>
+  <title>2. Read cookie</title>
 </head>
 <body>
   <h1>Login to the website</h1>
@@ -33,21 +33,32 @@
       document.cookie = `firstname=${firstNameInput}; expires=${expires};`;
       document.cookie = `email=${emailInput}; expires=${expires};`;
     };
+    
+    const getCookie = (name) => {
+      const cookies = document.cookie ? document.cookie.split(';') : [];
+      for (let i = 0; i < cookies.length; i++) {
+        const [cookieName, cookieValue] = cookies[i].trim().split('=');
+        if (cookieName === name) {
+          return decodeURIComponent(cookieValue);
+        }
+      }
+      return '';
+    };
+
     const showCookies = () => {
-        const cookies = document.cookie ? document.cookie.split(';') : [];
+        const emailCookie = getCookie('email');
+        const firstnameCookie = getCookie('firstname');
         const outputDiv = document.getElementById('cookieOutput');
         outputDiv.innerHTML = '';
-        if (cookies.length === 0) {
+        if (!emailCookie && !firstnameCookie) {
             outputDiv.innerHTML = "<p>No cookies found.</p>";
         } else {
-            cookies.forEach(cookie => {
-                const [name, value] = cookie.trim().split('=');
-                const p = document.createElement('p');
-                p.textContent = `${name}: ${decodeURIComponent(value)}`;
-                outputDiv.appendChild(p);
-            });
+            const p = document.createElement('p');
+            p.textContent = `Email: ${emailCookie} - Firstname: ${firstnameCookie}`;
+            outputDiv.appendChild(p);
         }
     };
+
     document.getElementById('loginBtn').addEventListener('click', setCookies);
     document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
   </script>
