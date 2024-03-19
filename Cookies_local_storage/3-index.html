@@ -10,8 +10,8 @@
     <input id="email" type="email" placeholder="Email">
     <button id="loginBtn">Log me in</button>
   </form>
-  <h1>Cookies</h1>
-  <button id="showCookiesBtn">Show the cookies</button>
+  <!-- <h1>Cookies</h1> -->
+  <!-- <button id="showCookiesBtn">Show the cookies</button> -->
   <div id="cookieOutput"></div>
   <script>
     const setCookies = () => {
@@ -34,6 +34,7 @@
       // MAke the cookies have that expire date
       document.cookie = `firstname=${firstNameInput}; expires=${expires};`;
       document.cookie = `email=${emailInput}; expires=${expires};`;
+      showWelcomeMessageOrForm(); // Update display
     };
 
     const getCookie = (name) => {
@@ -62,13 +63,17 @@
     };
 
     function showForm() {
-      const welcomeMsg = document.querySelector('h1');
       const loginForm = document.getElementById('loginForm');
-
-      if (welcomeMsg) {
-          welcomeMsg.remove();
+    
+      if (loginForm) {
+        loginForm.style.display = 'block';
       }
-      loginForm.style.display = 'block';
+    }
+    function showFormRefresh() {
+      const loginForm = document.getElementById('loginForm');
+      if (loginForm) {
+        loginForm.style.display = 'block';
+      }
     }
 
     function hideForm() {
@@ -80,15 +85,18 @@
       document.cookie = `firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
       document.cookie = `email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
       showForm();
+      showWelcomeMessageOrForm(); // Update display
     }
 
     function showWelcomeMessageOrForm() {
-      if (!getCookie('firstname') || !getCookie('email')) {
+      const firstNameCookie = getCookie('firstname');
+      const emailCookie = getCookie('email');
+
+      if (!firstNameCookie || !emailCookie) {
           showForm();
-      }
-      else {
+      } else {
           const welcomeMsg = document.createElement('h1');
-          welcomeMsg.textContent = `Welcome: ${getCookie('firstname')}`;
+          welcomeMsg.textContent = `Welcome: ${firstNameCookie}`;
           const logoutLink = document.createElement('a');
           logoutLink.href = "#";
           logoutLink.textContent = "(Logout)";
@@ -96,9 +104,10 @@
           logoutLink.style.fontStyle = "italic";
           logoutLink.style.marginLeft = "10px";
           logoutLink.onclick = function() {
-              deleteCookiesAndShowForm();
-              welcomeMsg.remove();
-              showForm();
+            deleteCookiesAndShowForm(); // This function handles showing the form as well
+            welcomeMsg.remove();
+            showFormRefresh();
+            location.reload(); // Reload the page
           };
           welcomeMsg.appendChild(logoutLink);
           document.body.innerHTML = '';
@@ -106,10 +115,17 @@
       }
     }
 
+    // Initial call to show login form or welcome message
     showWelcomeMessageOrForm();
 
-    document.getElementById('loginBtn').addEventListener('click', setCookies);
-    document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
+    // Event listener for login button
+    document.getElementById('loginBtn').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      setCookies();
+    });
+
+    // Event listener for logout button
+    // No need to explicitly add an event listener since the logout action is handled within showWelcomeMessageOrForm function
   </script>
 </body>
 </html>
