@@ -1,123 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>7. Advanced use of web storage</title>
-    <style>
-        button {
-            background: none;
-            border: none;
-            text-decoration: none;
-            cursor: pointer;
-            padding: 0;
-            font: inherit;
-        }
-    </style>
+    <title>1. Create cookie with expiration date and specific path</title>
 </head>
 <body>
+    <h1>Login to the website</h1>
+    <input id="firstname" type="text" placeholder="Firstname">
+    <input id="email" type="email" placeholder="Email">
+    <button id="loginBtn">Log me in</button>
+    <h1>Cookies</h1>
+    <button id="showCookiesBtn">Show the cookies</button>
+    <div id="cookieOutput"></div>
     <script>
-        // Make the Items Array
-        const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
-
-        // Is the session supported or not
-        if (typeof sessionStorage === 'undefined') {
-            alert("Sorry, your browser does not support Web storage. Try again with a better one");
-        } else {
-            // Grab Cart from sessionStorage
-            function getCartFromStorage() {
-                const cartString = sessionStorage.getItem('cart');
-                return cartString ? JSON.parse(cartString) : {};
-            }
-
-            // Add the item to the cart
-            function addItemToCart(item) {
-                const cart = getCartFromStorage();
-                cart[item] = cart[item] ? cart[item] + 1 : 1;
-                sessionStorage.setItem('cart', JSON.stringify(cart));
-                displayCart();
-            }
-
-            // Remove the items from cart
-            function removeItemFromCart(item) {
-                const cart = getCartFromStorage();
-                delete cart[item];
-                sessionStorage.setItem('cart', JSON.stringify(cart));
-                displayCart();
-            }
-
-            // Clear the entire cart
-            function clearCart() {
-                sessionStorage.removeItem('cart');
-                displayCart();
-            }
-
-            // Make My store front
-            function createStore() {
-                const itemList = document.createElement('div');
-                itemList.id = 'itemList';
-                document.body.appendChild(itemList);
-
-                const availableProductsHeader = document.createElement('h2');
-                availableProductsHeader.textContent = 'Available products:';
-                itemList.appendChild(availableProductsHeader);
-
-                const productList = document.createElement('ul');
-                itemList.appendChild(productList);
-
-                availableItems.forEach(item => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = item;
-                    listItem.addEventListener('click', () => addItemToCart(item));
-                    productList.appendChild(listItem);
+        const setCookies = () => {
+            const firstNameInput = document.getElementById('firstname').value;
+            const emailInput = document.getElementById('email').value;
+            console.log("First Name: ", firstNameInput);
+            console.log("Email: ", emailInput);
+            // Added the expiration part
+            // Grab Todays date
+            const now = new Date();
+            // Figure out what 10 days from now is:  (10 days from now)
+            //10 days
+            // 24 hours in a day
+            // 60 minutes in an hour
+            // 60 seconds in a minute
+            // 1000 milliseconds in a second
+            const expirationDate = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
+            // Converts the expiration date to a string in the UTC timezone REQUIRED!
+            const expires = expirationDate.toUTCString();
+            // MAke the cookies have that expire date
+            document.cookie = `firstname=${firstNameInput}; expires=${expires};`;
+            document.cookie = `email=${emailInput}; expires=${expires};`;
+        };
+        const showCookies = () => {
+            const cookies = document.cookie ? document.cookie.split(';') : [];
+            const outputDiv = document.getElementById('cookieOutput');
+            outputDiv.innerHTML = '<h2>Cookies:</h2>';
+            if (cookies.length === 0) {
+                outputDiv.innerHTML += "<p>No cookies found.</p>";
+            } else {
+                cookies.forEach(cookie => {
+                    const [name, value] = cookie.trim().split('=');
+                    outputDiv.innerHTML += `<p>${name}: ${decodeURIComponent(value)}</p>`;
                 });
             }
-
-            // Function to display cart
-            function displayCart() {
-                let cartDiv = document.getElementById('cart');
-                if (!cartDiv) {
-                    cartDiv = document.createElement('div');
-                    cartDiv.id = 'cart';
-                    document.body.appendChild(cartDiv);
-                }
-
-                cartDiv.innerHTML = ''; // Clear existing content otherwise you get multiple carts
-
-                const cartHeader = document.createElement('h2');
-                cartHeader.textContent = 'Your cart:';
-                cartDiv.appendChild(cartHeader);
-
-                const cartList = document.createElement('ul');
-                cartDiv.appendChild(cartList);
-
-                const cart = getCartFromStorage();
-                if (Object.keys(cart).length === 0) {
-                    const emptyCartListItem = document.createElement('li');
-                    emptyCartListItem.textContent = 'Your cart is empty';
-                    cartList.appendChild(emptyCartListItem);
-                } else {
-                    const clearCartButton = document.createElement('button');
-                    clearCartButton.textContent = 'Clear my cart';
-                    clearCartButton.addEventListener('click', clearCart);
-                    const clearCartListItem = document.createElement('li');
-                    clearCartListItem.appendChild(clearCartButton);
-                    cartList.appendChild(clearCartListItem);
-
-                    for (const [item, quantity] of Object.entries(cart)) {
-                        const cartItem = document.createElement('li');
-                        cartItem.textContent = `${item} x ${quantity}`;
-                        const removeButton = document.createElement('button');
-                        removeButton.textContent = '(Remove)';
-                        removeButton.addEventListener('click', () => removeItemFromCart(item));
-                        cartItem.appendChild(removeButton);
-                        cartList.appendChild(cartItem);
-                    }
-                }
-            }
-
-            // Start the Create and show the cart recursivly
-            createStore();
-            displayCart();
-        }
+        };
+        document.getElementById('loginBtn').addEventListener('click', setCookies);
+        document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
     </script>
 </body>
 </html>
