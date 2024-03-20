@@ -15,7 +15,6 @@
         } else {
             alert("Sorry, your browser does not support Web storage. Try again with a better one");
         }
-        // Changed it to sessionStorgae
         function addItemToCart(item) {
             sessionStorage.setItem(item, true);
             displayCart();
@@ -29,13 +28,16 @@
                 itemList.appendChild(listItem);
             });
         }
-        // Changed it to sessionStorgae
         function displayCart() {
             const cartMessage = document.getElementById('cartMessage');
             const itemCount = Object.keys(sessionStorage).length;
-            cartMessage.textContent = itemCount > 0 ? `You previously had ${itemCount} items in your cart` : '';
+            if (itemCount === 0) {
+                cartMessage.textContent = '';
+            } else {
+                const itemWord = itemCount === 1 ? 'item' : 'items';
+                cartMessage.textContent = `You previously had ${itemCount} ${itemWord} in your cart`;
+            }
         }
-        // Changed it to sessionStorgae
         function clearCart() {
             sessionStorage.clear();
             displayCart();
