@@ -1,55 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
-  <title>1. Create cookie with expiration date and specific path </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Task 0</title>
+    <script type="application/javascript"> 
+        function setCookies() {
+            let inputF = document.getElementById("firstname");
+            let inputE = document.getElementById("email");
+            let firstname = inputF.value;
+            let email = inputE.value;
+            document.cookie = `firstname=${firstname}`;
+            document.cookie = `email=${email}`;
+        }
+        function showCookies() {
+            let cookies = document.cookie.split(';');
+            let formattedCookies = 'Cookies: ';
+            cookies.forEach(cookie => {
+                let [name, value] = cookie.trim().split('=');
+                formattedCookies += `${name}=${value}; `;
+            });
+            formattedCookies = formattedCookies.slice(0, -2); // Remove the last space and semicolon
+            let p = document.createElement("p");
+            p.textContent = formattedCookies;
+            document.body.append(p);
+        }
+    </script>
 </head>
 <body>
-  <h1>Login to the website</h1>
-  <input id="firstname" type="text" placeholder="Firstname">
-  <input id="email" type="email" placeholder="Email">
-  <button id="loginBtn">Log me in</button>
-  <h1>Cookies</h1>
-  <button id="showCookiesBtn">Show the cookies</button>
-  <div id="cookieOutput"></div>
-  <script>
-    const setCookies = () => {
-      const firstNameInput = document.getElementById('firstname').value;
-      const emailInput = document.getElementById('email').value;
-      console.log("First Name: ", firstNameInput);
-      console.log("Email: ", emailInput);
-      // Added the expiration part
-      // Grab Todays date
-      const now = new Date();
-      // Figure out what 10 days from now is:  (10 days from now)
-      //10 days
-      // 24 hours in a day
-      // 60 minutes in an hour
-      // 60 seconds in a minute
-      // 1000 milliseconds in a second
-      const expirationDate = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
-      // Converts the expiration date to a string in the UTC timezone REQUIRED!
-      const expires = expirationDate.toUTCString();
-      // MAke the cookies have that expire date
-      document.cookie = `firstname=${firstNameInput}; expires=${expires};`;
-      document.cookie = `email=${emailInput}; expires=${expires};`;
-    };
-    const showCookies = () => {
-        const cookies = document.cookie ? document.cookie.split(';') : [];
-        const outputDiv = document.getElementById('cookieOutput');
-        outputDiv.innerHTML = '';
-        if (cookies.length === 0) {
-            outputDiv.innerHTML = "<p>No cookies found.</p>";
-        } else {
-            cookies.forEach(cookie => {
-                const [name, value] = cookie.trim().split('=');
-                const p = document.createElement('p');
-                p.textContent = `${name}: ${decodeURIComponent(value)}`;
-                outputDiv.appendChild(p);
-            });
-        }
-    };
-    document.getElementById('loginBtn').addEventListener('click', setCookies);
-    document.getElementById('showCookiesBtn').addEventListener('click', showCookies);
-  </script>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCookies();">Log me in</button>
+
+    <h1>Cookie</h1>
+    <button onclick="showCookies();">Show me cookies</button>
 </body>
 </html>
