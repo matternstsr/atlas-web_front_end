@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Task 0</title>
+    <title>0. Create basic cookie</title>
     <script type="application/javascript"> 
         function setCookies() {
             let inputF = document.getElementById("firstname");
@@ -21,7 +21,7 @@
             });
             formattedCookies = formattedCookies.slice(0, -2); // Remove the last space and semicolon
             let p = document.createElement("p");
-            p.textContent = formattedCookies;
+            p.innerHTML = formattedCookies; // Set innerHTML instead of textContent
             document.body.append(p);
         }
     </script>
